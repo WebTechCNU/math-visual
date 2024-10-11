@@ -1,18 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+    <!-- <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script> -->
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+        async>
+    </script>
     <title>Document</title>
 </head>
+
 <body>
-    <canvas id="canvas" width="600px" height="600px"></canvas>
+    <div class="two-columns">
+        <div class="column">
+            <canvas id="canvas" width="600px" height="600px"></canvas>
 
-    <input type="numer" id="a"/>
+        </div>
 
-    <input type="number" id="b"/>
 
-    <button onclick="draw()">Draw</button>
+        <div class="column-input">
+            <div id="formula">
+                <input type="number" id="a-0" class="input-a" value="1"/>
+                $x +$
+                <input type="number" id="a-1" class="input-a" value="0"/>
+            </div>
+
+            <button onclick="draw()">Draw</button>
+
+            <br>
+
+            <button onclick="addParameter()">Add $x$</button>
+            <button onclick="addElement('sinx')">Add $sin x$</button>
+            <button onclick="addElement('cosx')">Add $cos x$</button>
+            <button onclick="addElement('tanx')">Add $tng x$</button>
+
+
+            <br>
+
+            <div style="margin-left: 0.5rem;">
+                $x_{min}:$
+                <input type="number" id="x-min" value="-10"/>
+                $x_{max}:$
+                <input type="number" id="x-max" value="10"/>
+
+                $y_{min}:$
+                <input type="number" id="y-min" value="-10"/>
+                $y_{max}:$
+                <input type="number" id="y-max" value="10"/>
+
+                <button onclick="changeScale()">Change Scale</button>
+            </div>
+
+            <br>
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 
