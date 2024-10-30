@@ -129,3 +129,10 @@ function addParameter(){
 }
 
 draw();
+
+fetch("file.txt")
+  .then((res) => res.text())
+  .then((text) => {
+    console.log(text);
+   })
+  .catch((e) => console.error(e));

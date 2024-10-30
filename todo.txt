@@ -1,0 +1,14 @@
+TODO:
+
+1. More functions
+2. Clear canvas
+3. Formula display
+4. Fractals
+5. Scale lines
+6. Scroll
+7. ML
+8. Vectors 
+9. 
+10. 
+
+
